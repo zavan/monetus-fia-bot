@@ -11,7 +11,7 @@
     "dev": "supervisor -x micro-bot index.js",
     "start": "micro-bot",
     "lint": "eslint .",
-    "test": "npm run lint"
+    "test": "yarn lint && yarn jest"
   },
   "engines": {
     "node": ">=8.5.0"
