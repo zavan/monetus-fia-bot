@@ -11,7 +11,7 @@
     "dev": "supervisor -x micro-bot index.js",
     "start": "micro-bot",
     "lint": "eslint .",
-    "test": "npm run lint"
+    "test": "yarn lint && yarn jest"
   },
   "engines": {
     "node": ">=8.5.0"
@@ -30,9 +30,11 @@
     "eslint": "^4.17.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
+    "jest": "^22.4.3",
     "supervisor": "^0.12.0"
   }
 }
