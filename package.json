@@ -9,7 +9,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "supervisor -x micro-bot -- index.js -e",
-    "start": "micro-bot",
+    "start": "micro-bot -e",
     "lint": "eslint .",
     "test": "yarn lint && yarn jest"
   },
