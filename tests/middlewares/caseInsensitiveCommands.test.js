@@ -1,11 +1,11 @@
 const caseInsensitiveCommands = require('../../lib/middlewares/caseInsensitiveCommands')
 
 test('middlewares.caseInsensitiveCommands', () => {
-  const ctx = Object.freeze({
+  const ctx = {
     message: {
       text: 'Q NATU3'
     }
-  })
+  }
 
   const expected = {
     message: {
@@ -14,5 +14,5 @@ test('middlewares.caseInsensitiveCommands', () => {
   }
 
   return caseInsensitiveCommands(ctx, Promise.resolve.bind(Promise))
-    .then(ctx => expect(ctx).toEqual(expected))
+    .then(context => expect(context).toEqual(expected))
 })
