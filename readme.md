@@ -6,12 +6,14 @@ This is not official.
 
 ## Usage
 
+Copy `.env.example` to `.env` and fill the variables with real tokens, then:
+
 ```sh
 $ npm install
-$ BOT_TOKEN='123:......' npm run dev
+$ npm run dev
 ```
 
 ```sh
 $ yarn
-$ BOT_TOKEN='123:......' yarn dev
+$ yarn dev
 ```
