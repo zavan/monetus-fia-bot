@@ -23,16 +23,5 @@ test('messages.detailedPerformance', () => {
     ]
   }
 
-  expect(detailedPerformance(portfolioPerformance))
-    .toEqual(`*Performance do Monetus FIA*
-
-*LEET1 (1337)*
-_Alocação_: 13.37%
-_Variação_: +0.13%
-
-*OCTO3 (Octocat)*
-_Alocação_: 15.47%
-_Variação_: +0.05%
-
-*Performance da carteira*: +0.18%`)
+  expect(detailedPerformance(portfolioPerformance)).toEqual('*Performance da carteira*: +0.18%')
 })
