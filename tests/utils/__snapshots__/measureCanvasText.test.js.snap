@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils.measureCanvasText 1`] = `
+Object {
+  "height": 152,
+  "numberOfLines": 8,
+  "width": 528,
+}
+`;

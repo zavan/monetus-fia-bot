@@ -10,12 +10,8 @@ test('utils.measureCanvasText', () => {
 │ TOTAL  │               │   100% │ +0.08% │
 └────────┴───────────────┴────────┴────────┘`
 
-  const fontFamily = 'Ubuntu Mono'
+  const fontFamily = 'Fira Code'
   const fontSize = '20px'
 
-  expect(measureCanvasText(text, fontFamily, fontSize)).toMatchObject({
-    width: 440,
-    height: 136,
-    numberOfLines: 8
-  })
+  expect(measureCanvasText(text, fontFamily, fontSize)).toMatchSnapshot()
 })

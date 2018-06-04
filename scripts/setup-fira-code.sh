@@ -13,7 +13,7 @@ if [ ! -e ${file_path} ]; then
   fira_code_url="https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-Regular.ttf?raw=true"
 
   echo 'Fetching "Fira Code"...'
-  wget -O $file_path $fira_code_url
+  wget -O ${file_path} ${fira_code_url}
 
   echo 'Rebuilding Fonts cache...'
   fc-cache -f
