@@ -24,17 +24,5 @@ test('messages.afterMarketPerformance', () => {
   }
 
   expect(afterMarketPerformance(portfolioPerformance))
-    .toEqual(`*After-Market fechado!*
-
-*Performance do Monetus FIA*
-
-*LEET1 (1337)*
-_Alocação_: 13.37%
-_Variação_: +0.13%
-
-*OCTO3 (Octocat)*
-_Alocação_: 15.47%
-_Variação_: +0.05%
-
-*Performance da carteira*: +0.18%`)
+    .toEqual(`*After-Market fechado!*\n\n*Performance da carteira*: +0.18%`)
 })
