@@ -10,5 +10,6 @@ test('utils.generateAsciiTableImageBuffer', () => {
 │ TOTAL  │               │   100% │ +0.08% │
 └────────┴───────────────┴────────┴────────┘`
 
-  expect(generateAsciiTableImageBuffer(text)).toMatchSnapshot()
+  return generateAsciiTableImageBuffer(text)
+    .then(imageBuffer => expect(imageBuffer).toMatchSnapshot())
 })
