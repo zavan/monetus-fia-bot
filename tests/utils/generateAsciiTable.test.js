@@ -1,22 +1,29 @@
 const generateAsciiTable = require('../../lib/utils/generateAsciiTable')
 
-const assets = [
-  {
-    ticker: 'LEET1',
-    name: '1337! Corp.',
-    allocation: 5010,
-    delta: 0.13
-  },
-  {
-    ticker: 'OCTO3',
-    name: 'Octocat Corp.',
-    allocation: 4990,
-    delta: -0.05
-  }
-]
+const performance = {
+  assets: [
+    {
+      ticker: 'LEET1',
+      name: '1337! Corp.',
+      allocation: 5010,
+      quote: {
+        delta: 0.13
+      }
+    },
+    {
+      ticker: 'OCTO3',
+      name: 'Octocat Corp.',
+      allocation: 4990,
+      quote: {
+        delta: -0.05
+      }
+    }
+  ],
+  delta: 0.08
+}
 
 test('utils.generateAsciiTable: with delta', () => {
-  expect(generateAsciiTable(assets)).toEqual(`┌────────┬───────────────┬────────┬────────┐
+  expect(generateAsciiTable(performance)).toEqual(`┌────────┬───────────────┬────────┬────────┐
 │ Ticker │ Asset         │      % │      Δ │
 ├────────┼───────────────┼────────┼────────┤
 │ LEET1  │ 1337! Corp.   │ 50.10% │ +0.13% │
@@ -27,7 +34,7 @@ test('utils.generateAsciiTable: with delta', () => {
 })
 
 test('utils. generateAsciiTable: without delta', () => {
-  expect(generateAsciiTable(assets, { delta: false })).toEqual(`┌────────┬───────────────┬────────┐
+  expect(generateAsciiTable(performance, { delta: false })).toEqual(`┌────────┬───────────────┬────────┐
 │ Ticker │ Asset         │      % │
 ├────────┼───────────────┼────────┤
 │ LEET1  │ 1337! Corp.   │ 50.10% │
