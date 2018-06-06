@@ -2,7 +2,7 @@
 
 exports[`utils.measureCanvasText 1`] = `
 Object {
-  "height": 152,
+  "height": 192,
   "numberOfLines": 8,
   "width": 528,
 }
